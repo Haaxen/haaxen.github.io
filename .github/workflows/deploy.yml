@@ -23,8 +23,9 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install
-          npm run build
+          npm install -g yarn
+          yarn
+          yarn build
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
