@@ -17,16 +17,15 @@ jobs:
           persist-credentials: false
           
       - name: Node
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v4
         with:
-          node-version: '12'
+          node-version: 20
 
       - name: Install and Build
         run: |
-          npm install -g yarn
-          yarn
-          yarn build
-
+          npm install
+          npm run build
+          
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
